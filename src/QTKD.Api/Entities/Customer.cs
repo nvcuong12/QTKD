@@ -1,0 +1,18 @@
+namespace QtkdApi.Entities;
+
+public class Customer
+{
+    public int Id { get; set; }
+
+    public string Name { get; set; } = string.Empty;
+
+    public CustomerStatus Status { get; set; } = CustomerStatus.Active;
+
+    public ICollection<Contract> Contracts { get; set; } = new List<Contract>();
+}
+
+public enum CustomerStatus
+{
+    Active,
+    Inactive
+}
